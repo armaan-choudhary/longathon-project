@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Login</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='spice_mix.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+   <!-- <img src="static/images/dhruvu.jpg" alt="dhruvu" class="loginImage"> -->
+   <div class="loginWrapper">
+      <div class="imageWrapper">
+         <img src="static/images/dhruvu.jpg" alt="">
+      </div>
+      <div class="formWrapper">
+         <h2 class="title">
+            SaDMA
+         </h2>
+         <div class="inputWrapper">
+            <div class="inputGroup">
+               <span>Email :</span>
+               <input type="text">
+            </div>
+            <div class="inputGroup">
+               <span>Password :</span>
+               <input type="text">
+            </div>
+         </div>
+         <button class="submitBtn">
+            Login
+         </button>
+         <a href="{{ url_for('signup') }}" class="newUser">new user?</a>
+      </div>
+   </div>
+</body>
+</html>
