@@ -1,0 +1,97 @@
+body {
+   background-image: url(./images/hero-background.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   min-height: 100vh;
+   /* overflow-y: hidden; */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+}
+
+.navWrapper {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   padding: 3rem;
+   align-items: center;
+}
+
+.navWrapper .logoText {
+   font-size: 3.5rem;
+   text-decoration: none;
+   color: #fff;
+   font-weight: 900;
+   font-family: "Roboto Condensed", serif;
+   letter-spacing: 2px;
+}
+
+.red {
+   color: #CD4654;
+   font-family: "Roboto Condensed", serif;
+   letter-spacing: 2px;
+}
+
+.navWrapper .rightLinks a{
+   margin: 0 2rem;
+   text-decoration: none;
+   color: #fff;
+   font-size: 1.5rem;
+   font-weight: 500;
+}
+
+.cta {
+   padding: 0.75rem 2.5rem;
+   background-color: #CD4654;
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   font-weight: 500;
+   color: #fff;
+   font-size: 1.5rem;
+}
+
+.heroTextWrapper {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   align-items: center;
+   padding: 5rem 0;
+}
+
+.heroTextWrapper .heroText {
+   font-size: 4rem;
+   font-family: "Roboto Condensed", serif;
+   color: #CD4654;
+   letter-spacing: 2px;
+   font-weight: 900;
+   margin: 0.75rem 0;
+}
+
+.superText, .subText {
+   color: #fff;
+   font-size: 1.5rem;
+   max-width: 32.5%;
+   text-align: center;
+   font-weight: 400;
+}
+
+.getStartedCTA {
+   font-size: 2rem;
+   font-weight: 500;
+   padding: 1rem 3.5rem;
+   border-radius: 10px;
+   color: #fff;
+   text-decoration: none;
+   z-index: 2;
+}
+
+.vectorWrapper {
+   z-index: 1;
+}
+
+a.cta:hover {
+   filter: brightness(1.1);
+}

@@ -2,17 +2,33 @@
 <html>
 
 <head>
-    <title>My Web Page</title>
+    <title>EduEdge</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='spice_mix.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
 
 <body>
-    HOME
-    <a href="{{ url_for('login') }}">Login</a>
+    <div class="navWrapper">
+        <a href="{{ url_for('index') }}" class="logoText"><span class="red">Edu</span>Edge</a>
+        <div class="rightLinks">
+            <a href="" class="navLinks">About</a>
+            <a href="" class="navLinks">Contact Us</a>
+            <a href="{{ url_for('login')}}" class="cta">Login / SignUp</a>
+        </div>
+    </div>
+    <div class="heroTextWrapper">
+        <p class="superText">Simplify Your School's Administrative Tasks</p>
+        <h1 class="heroText">Streamline Student Data Management</h1>
+        <p class="subText">Track student progress, manage enrollment, and analyze performance. Empower your school with
+            data-driven insights. </p>
+    </div>
+    <div class="ctaWrapper">
+        <a href="{{ url_for('login')}}" class="cta getStartedCTA">Get Started</a>
+    </div>
+    <div class="vectorWrapper">
+        <img src="static/images/hero-vector.svg" alt="">
+    </div>
 </body>
 
 </html>
+<!-- {{ url_for('login') }} -->

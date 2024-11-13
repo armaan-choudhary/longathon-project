@@ -42,7 +42,7 @@ body {
 
 .title {
    font-size: 4rem;
-   color: #333;
+   color: #CD4654;
       font-weight: 600;
    /* text-transform: uppercase; */
 }
@@ -71,7 +71,7 @@ body {
 }
 
 .inputWrapper .inputGroup span {
-   color: #333;
+   color: #CD4654;
    margin-left: 0.5rem;
    font-weight: 600;
 }
@@ -81,7 +81,7 @@ body {
    width: 45%;
    border: none;
    margin: 0.5rem 0;
-   background-color: #333;
+   background-color: #CD4654;
    color: #fff;
    font-weight: 500;
    border-radius: 50px;
