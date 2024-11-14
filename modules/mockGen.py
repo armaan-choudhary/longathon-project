@@ -188,11 +188,11 @@ def randomAddress():
 n = int(input("Enter Number of Entries : "))
 
 for i in range(n):
-    AddTeacher(
+    AddParent(
         random.choice(firstNames),
         random.choice(lastNames),
-        randomDate(start_date, end_date),
-        random.choice(genders),
+        # randomDate(start_date, end_date),
+        # random.choice(genders),
         randomAddress(),
         str(random.randint(1000000000, 9999999999)),
     )

@@ -145,8 +145,74 @@ def SearchTeacherByName(n):
             print("\nTeacher No.", row[0], "\nName :", row[1], row[2])
 
 
-SearchTeacherByName("Dhruv")
+
+def AddParent(fName, lName, address, pNo):
+    cursor.execute(
+        """
+      INSERT INTO Parent (FirstName, LastName, Address, PhoneNumber)
+      VALUES (?, ?, ?, ?)
+    """,
+        (fName, lName, address, pNo),
+    )
 
 
-# conn.commit()
-# conn.close()
+def UpdateParent(id, fName="", lName="", address="", pNo=""):
+    cursor.execute("SELECT * FROM Parent WHERE ParentID = ?", (id,))
+    teachInfo = cursor.fetchone()
+
+    if teachInfo:
+        cursor.execute(
+            """
+            UPDATE Parent
+            SET FirstName = ?, LastName = ?, Address = ?, PhoneNumber = ?
+            WHERE ParentID = ?
+            """,
+            (
+                fName or teachInfo[1],
+                lName or teachInfo[2],
+                address or teachInfo[3],
+                pNo or teachInfo[4],
+                id,
+            ),
+        )
+    else:
+        print("Parent not found.")
+
+
+def DeleteParent(id):
+    cursor.execute("DELETE FROM Parent WHERE ParentID = ?", (id,))
+    print("Deleted !")
+
+
+def SearchParentByID(id):
+    cursor.execute(
+        "SELECT ParentID, FirstName, LastName FROM Parent WHERE ParentID = ?", (id,)
+    )
+
+    rows = cursor.fetchall()
+    if rows == []:
+        print("No Records Found.")
+    else:
+        for row in rows:
+            print("\nParent No.", row[0], "\nName :", row[1], row[2])
+
+
+def SearchParentByName(n):
+    cursor.execute(
+        "SELECT ParentID, FirstName, LastName FROM Parent WHERE FirstName = ? OR LastName = ?",
+        (
+            n,
+            n,
+        ),
+    )
+
+    rows = cursor.fetchall()
+    if rows == []:
+        print("No Records Found.")
+    else:
+        for row in rows:
+            print("\nParent No.", row[0], "\nName :", row[1], row[2])
+
+
+
+# SearchStudentByName("Lendi")
